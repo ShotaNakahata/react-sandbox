@@ -6,11 +6,16 @@
 
 import "./Child.css";
 
-const Child = ({color = "green"}) => {
+const Child = ({color = "green", num, helloFn,obj,obj1}) => {
   
   return (
     <div className={`component ${color}`}>
       <h3>Hello Component</h3>
+      <h3>{num}</h3>
+      <h3>{helloFn}</h3>
+      <h3>{obj.name + obj.age}</h3>
+      <h3>{obj1.name + obj1.age}</h3>
+      
     </div>
   );
 };
