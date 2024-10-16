@@ -4,6 +4,7 @@ const Example= ()=>{
   const [countA, setCountA] = useState(0);
   const [countB, setCountB] = useState(0);
   const [toggle ,setToggle] = useState("ture");
+  
   const changeToggle=()=>{
     setToggle(prev => !prev)
   }

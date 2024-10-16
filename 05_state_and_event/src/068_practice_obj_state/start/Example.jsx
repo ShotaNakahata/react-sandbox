@@ -7,14 +7,14 @@ const Example = () => {
     setOrder({...orderObj, item:e.target.value})
   };
   const countUp = () => {
-    setOrder({...orderObj,count:order.count+1})
+    setOrder({...order,count:order.count+1})
   };
   // const countUp = () => {
   //   setCount(state => state + 1);
   // };
 
   const countDown = () => {
-    setOrder({...orderObj,count:order.count-1})
+    setOrder({...order,count:order.count-1})
   };
   return (
     <div>
