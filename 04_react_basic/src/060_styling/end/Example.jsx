@@ -3,7 +3,7 @@
 */
 
 //  POINT CSS ファイルを import する
-import "./Example.css";
+// import "./Example.css";
 
 const Example = () => {
   return (
