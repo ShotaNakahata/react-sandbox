@@ -10,7 +10,16 @@
     <script type="text/babel">
         const appEL = document.querySelector("#app");
         const root = ReactDOM.createRoot(appEL);
-        root.render(<h1>こんにちは</h1>)
+        const Example = ()=>{
+            return (
+                <div>
+                    <h1>こんにちは</h1>
+                    <p>component</p>
+                
+                </div>
+            )
+        }
+        root.render(<Example/>)
     </script>
 </body>
 </html>
