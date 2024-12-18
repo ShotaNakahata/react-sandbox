@@ -18,7 +18,6 @@ const Example = () => {
       if (newFruit.label === e.target.value) {
         newFruit.checked = !fruit.checked;
       }
-
       return newFruit;
     });
 
