@@ -1,10 +1,26 @@
+import { useState } from "react";
 const Example = () => {
+  const RADIO_COLLECTION = ["Apple", "Banana", "Cherry"];
+  const [val, setVal] = useState("Apple");
+  const onChange = (e)=>{
+    setVal(e.target.value)
+  }
   return (
-    <p style={{ textAlign: "center" }}>
-      startフォルダの内容が表示されます。
-      <br />
-      練習用に使ってください！
-    </p>
+    <>
+      {RADIO_COLLECTION.map((fruit) => {
+        return (
+          <label key={fruit}>
+            <input type="radio" 
+            value={fruit} 
+            checked={fruit===val} 
+            onChange={onChange}/>
+            {fruit}
+          </label>
+        );
+      })}
+      <h3>I wanna eat {val}</h3>
+
+    </>
   );
 };
 
