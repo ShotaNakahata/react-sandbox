@@ -1,10 +1,15 @@
+import { useState } from "react";
 const Example = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const checked = () => {
+    setIsChecked((prev) => !prev);
+  };
   return (
-    <p style={{ textAlign: "center" }}>
-      startフォルダの内容が表示されます。
-      <br />
-      練習用に使ってください！
-    </p>
+    <div>
+      <label htmlFor="a">チェック：</label>
+      <input type="checkbox" id="a" onChange={checked} checked={isChecked} />
+      <div>{isChecked === true ? "on!" : "off!"}</div>
+    </div>
   );
 };
 
