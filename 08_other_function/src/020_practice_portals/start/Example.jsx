@@ -24,14 +24,14 @@ const Example = () => {
       >
         トーストを表示する
       </button>
-      <ToastPortal>
       {toastOpen && (
+      <ToastPortal>
           <Toast
             visible={toastOpen}
             handleCloseClick={() => setToastOpen(false)}
           />
-      )}
       </ToastPortal>
+      )}
       
     </div>
   );
