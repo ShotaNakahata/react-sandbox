@@ -6,7 +6,10 @@ import Modal from "./components/Modal";
 第一引数: React の子要素としてレンダー可能なもの （要素、文字列、フラグメント、コンポーネントなど）
 第二引数: レンダー先のDOM要素
 */
-
+const MordalPortal = ({children})=>{
+  const target = document.querySelector(".container.start")
+  return createPortal(children,target)
+}
 /* POINT createPortalはどんなときに使うか？
 子要素は親要素のスタイルによって表示に制限を受ける場合があります。
 （overflow: hidden 、 z-index 、 width　など・・・ ）
@@ -27,7 +30,11 @@ const Example = () => {
       >
         モーダルを表示する
       </button>
-      {modalOpen && <Modal handleCloseClick={() => setModalOpen(false)} />}
+      {modalOpen && (
+        <MordalPortal>
+          <Modal handleCloseClick={() => setModalOpen(false)} />
+        </MordalPortal>
+      )}
     </div>
   );
 };
