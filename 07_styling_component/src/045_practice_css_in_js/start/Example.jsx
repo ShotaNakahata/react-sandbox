@@ -7,6 +7,7 @@ const FirstButton = styled.button`
   margin: 0.5rem 1rem;
   width: 11rem;
   border: none;
+  background: pink;
 `;
 
 const SecondButton = styled(FirstButton)`
