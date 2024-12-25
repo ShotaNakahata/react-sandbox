@@ -1,8 +1,7 @@
-import { ThemeContext } from "../Example";
-import { useContext } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Main = () => {
-  const [theme] = useContext(ThemeContext);
+  const [theme] = useTheme();
   return (
     <main className={`content-${theme}`}>
       <h1>テーマの切り替え</h1>
