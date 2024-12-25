@@ -1,13 +1,13 @@
 import { useTheme } from "../context/ThemeContext";
 
-const Main = () => {
+const Footer = () => {
   const theme = useTheme();
-  console.log("Main")
+  console.log("Footer")
   return (
     <main className={`content-${theme}`}>
-      <h1>テーマの切り替え</h1>
+      <h1>Footer</h1>
     </main>
   );
 };
 
-export default Main;
+export default Footer;
