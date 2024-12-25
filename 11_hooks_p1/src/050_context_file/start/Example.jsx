@@ -11,6 +11,18 @@ const Example = () => {
   return (
     <>
       <header className={`content-${theme}`}>
+        {THEMES.map(_theme=>{
+          return(
+            <label id="_theme">
+              <input type="radio" value={_theme} key={_theme} 
+              checked={theme===_theme}
+              onClick={changeTheme}
+              />
+              {_theme}
+            </label>
+            
+          )
+        })}
         
       </header>
       <main className={`content-${theme}`}>
