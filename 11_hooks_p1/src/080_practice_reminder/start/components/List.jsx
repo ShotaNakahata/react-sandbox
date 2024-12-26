@@ -1,14 +1,14 @@
 import Item from "./Item";
-const List = ({todos, deleteTodo,updataTodos}) => {
-    const complete = (id) => {
-        deleteTodo(id)
-    }
-    return (
-        <div>
-            {todos.map(todo => <Item todo={todo} key={todo.id} complete={complete} updataTodos={updataTodos}
-            ></Item>)}
-        </div>
-    );
-}
+import { useTodoContext } from "../context/TodoContext";
+const List = () => {
+  const todos = useTodoContext();
+  return (
+    <div>
+      {todos.map((todo) => (
+        <Item todo={todo} key={todo.id} />
+      ))}
+    </div>
+  );
+};
 
 export default List;
