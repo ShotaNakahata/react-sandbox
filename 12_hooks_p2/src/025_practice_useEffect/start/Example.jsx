@@ -4,7 +4,9 @@ import { useState } from 'react';
 const Example = () => {
   const [checked, setChecked] = useState(false);
   useEffect(()=>{
-    window.alert()
+    if(checked){
+      window.alert("checked!")
+    }
   },[checked])
 
   return (
