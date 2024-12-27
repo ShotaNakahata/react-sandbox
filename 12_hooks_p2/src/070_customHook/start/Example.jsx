@@ -1,9 +1,8 @@
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useState} from "react";
 import useTimer  from "./useTimer";
 
 const Example = () => {
   const [isDisp, setIsDisp] = useState(true);
-
   return (
     <>
       {isDisp && <Timer/>}
