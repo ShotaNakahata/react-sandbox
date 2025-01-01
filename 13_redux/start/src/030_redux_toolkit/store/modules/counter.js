@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const counter = createSlice({
   name: "counter",
   initialState: {
-    count:0
+    count: 0
   },
   reducers: {
     add(state, { type, payload }) {
@@ -23,6 +23,12 @@ const counter = createSlice({
   }
 })
 const { add, minus } = counter.actions;
+
+const addAysnc = () => {
+  return (dispatch, payload) => {
+    
+  }
+}
 
 export { add, minus }
 export default counter.reducer
