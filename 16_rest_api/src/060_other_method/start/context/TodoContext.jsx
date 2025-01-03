@@ -1,4 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
+import todoApi from "../api/todo"
+import { useEffect } from "react";
 
 const TodoContext = createContext();
 const TodoDispatchContext = createContext();
@@ -23,6 +25,8 @@ const todosList = [
 
 const todoReducer = (todos, action) => {
   switch (action.type) {
+    case "todo/init":
+      return [...action.todos];
     case "todo/add":
       return [...todos, action.todo];
     case "todo/delete":
@@ -41,7 +45,13 @@ const todoReducer = (todos, action) => {
 };
 
 const TodoProvider = ({ children }) => {
-  const [todos, dispatch] = useReducer(todoReducer, todosList);
+  const [todos, dispatch] = useReducer(todoReducer, []);
+
+  useEffect(()=>{
+    todoApi.getALL().then(todos=>{
+      dispatch({type:"todo/init",todos})
+    })
+  },[])
 
   return (
     <TodoContext.Provider value={todos}>

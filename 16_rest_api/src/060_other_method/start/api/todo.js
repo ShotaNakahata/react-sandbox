@@ -5,7 +5,7 @@ const ENDPOINT_URL = "http://127.0.0.1:3003/todo"
 const todoApi = {
     async getALL() {
         const result = await axios.get(ENDPOINT_URL)
-        console.log(result.data)
+        console.log("from practice",result.data)
         return result.data
     },
     async post(todo) {
