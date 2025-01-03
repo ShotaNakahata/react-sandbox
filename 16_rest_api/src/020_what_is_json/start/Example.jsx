@@ -27,7 +27,8 @@ const Example = () => {
   const usersDataString = JSON.stringify(usersData);
 
   // JSON形式の文字列が出力される
-  console.log(typeof usersDataString === 'string');
+  // console.log(typeof usersDataString === 'string');
+  console.log(usersDataString)
 
   // JSON形式の文字列をJavaScriptが認識できる形に変換する
   console.log(JSON.parse(usersDataString));
