@@ -1,6 +1,6 @@
 export default function subLayout({ children }) {
     return (
-        <div style={{ background: "red" }}>
+        <div>
             {children}
         </div>
     )
