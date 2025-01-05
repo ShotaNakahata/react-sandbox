@@ -9,6 +9,7 @@ export default function ArticleForm() {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
+    console.log("from frontend formData",formData)
 
     fetch('/api/article', { method: form.method, body: formData }).then((res) => {
       if(!res.ok) {
