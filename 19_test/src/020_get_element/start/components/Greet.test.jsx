@@ -15,4 +15,7 @@ test("h1にこんにちはがあるかどうか",()=>{
 
     const h2El= container.querySelector("h2")
     screen.debug(h2El)
+
+    const labelEl = screen.getByLabelText("氏名")
+    screen.debug(labelEl)
 })
