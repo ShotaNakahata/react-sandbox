@@ -1,5 +1,6 @@
+import  Hello  from "./Hello";
 const Example = () => {
-    // 練習
+    return <Hello></Hello>
 };
 
 export default Example;
