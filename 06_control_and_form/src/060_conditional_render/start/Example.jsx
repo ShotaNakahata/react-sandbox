@@ -5,6 +5,12 @@ const Example = () => {
 
   const [filterVal, setFilterVal] = useState("");
 
+  const animalList = animals.filter(animal=>animal.indexOf(filterVal) !==-1)
+  .map((animal)=>{
+    return(
+      <li key={animal}>{animal=="Dog"?animal+"⭐︎":animal}</li>
+    )
+  })
   return (
     <>
       <input
@@ -13,7 +19,7 @@ const Example = () => {
         onChange={(e) => setFilterVal(e.target.value)}
       />
       <ul>
-        {animals
+        {/* {animals
           .filter((animal) => {
             const isMatch = animal.indexOf(filterVal) !== -1;
             console.log(animal.indexOf(filterVal));
@@ -21,7 +27,8 @@ const Example = () => {
           })
           .map((animal) => (
             <li key={animal}>{animal}</li>
-          ))}
+          ))} */}
+          {animalList}
       </ul>
     </>
   );

@@ -10,7 +10,7 @@ const Example = () => {
 
   // POINT map関数でJSXの配列を作成
   const helloAnimals = animals.map((animal) => {
-    return <li>Hello {animal}</li>;
+    return <li key={animal}>Hello {animal}</li>;
   });
 
   return (

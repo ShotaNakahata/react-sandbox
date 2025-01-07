@@ -12,8 +12,8 @@ const animals = ["Dog", "Cat", "Rat"];
 
 const Example = () => {
     const [fillterVal,setFilterVal]=useState("")
-    const animalList=animals.filter(animal=>animal.indexOf(fillterVal)!==-1).map((animal)=>{
-  return(<li key={animal}>{animal}</li>)
+    const animalList=animals.filter(animal=>animal.indexOf(fillterVal)!==-1)
+    .map((animal)=>{return(<li key={animal}>{animal}</li>)
 })
   return (
     <>
